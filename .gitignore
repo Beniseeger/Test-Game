@@ -27,9 +27,7 @@ sysinfo.txt
 *.userprefs
 *.pidb
 .DS_Store
-*.meta
-*.shader
-*.cginc
+
 
 ###
 # OS generated
