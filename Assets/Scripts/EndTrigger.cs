@@ -8,7 +8,7 @@ public class EndTrigger : MonoBehaviour
 
     private void OnTriggerEnter()
     {
-        Invoke("triggerLevelEnding", 0.75f);
+        Invoke("triggerLevelEnding", 0.35f);
     }
 
     private void triggerLevelEnding()

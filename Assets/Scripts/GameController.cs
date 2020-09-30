@@ -6,10 +6,13 @@ public class GameController : MonoBehaviour
     private bool gameActive = true;
     public GameObject completeLevelUI;
 
+
     public void EndGame()
     {
         if (gameActive)
         {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<MusicScript>().PlayLosingMusic();
+
             gameActive = false;
             //Restart Game
             Restart();
@@ -23,6 +26,7 @@ public class GameController : MonoBehaviour
 
     public void completeLevel()
     {
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicScript>().PlayWinningMusic();
         completeLevelUI.SetActive(true);
     }
 }

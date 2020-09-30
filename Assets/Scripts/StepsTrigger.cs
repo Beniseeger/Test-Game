@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class StepsTrigger : MonoBehaviour
 {
     private Score score;
-    public Text text;
 
     private bool triggeredAlready = false;
 
@@ -14,7 +13,7 @@ public class StepsTrigger : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            score = text.GetComponent<Score>();
+            score = GameObject.FindGameObjectWithTag("Score").GetComponentInChildren<Score>();
             score.scoreNumber = score.scoreNumber + 1;
             triggeredAlready = true;
         }
