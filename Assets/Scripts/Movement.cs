@@ -116,7 +116,7 @@ public class Movement : MonoBehaviour
     private void Walk()
     {
 
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
         controller.Move(move * Time.deltaTime * playerSpeed);
         
@@ -139,11 +139,15 @@ public class Movement : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
+        hit.transform.SendMessage("HittedPlayer", SendMessageOptions.DontRequireReceiver);
+
         if (hit.gameObject.tag == "DeathTerrain")
         {
             //Make cool death animation
             FindObjectOfType<GameController>().EndGame();
 
         }
+        
     }
+
 }

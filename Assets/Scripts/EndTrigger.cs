@@ -6,9 +6,12 @@ public class EndTrigger : MonoBehaviour
 {
     public GameController gameController;
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider collider)
     {
-        Invoke("triggerLevelEnding", 0.35f);
+        if (collider.tag == "Player")
+        {
+            Invoke("triggerLevelEnding", 0.35f);
+        }
     }
 
     private void triggerLevelEnding()

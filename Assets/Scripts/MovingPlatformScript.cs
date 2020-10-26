@@ -11,7 +11,7 @@ public class MovingPlatformScript : MonoBehaviour
     private Vector3 nextPosition;
 
     [SerializeField]
-    private float speed;
+    private float speed = 8.0f;
     
     [SerializeField]
     private Transform childTransform;

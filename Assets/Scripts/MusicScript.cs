@@ -6,7 +6,8 @@ public class MusicScript : MonoBehaviour
     public AudioSource _winAudioSource;
     private void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+       DontDestroyOnLoad(transform.gameObject);
+
     }
 
     public void PlayLosingMusic()

@@ -8,6 +8,9 @@ TagManager:
   - MovingPlatform
   - Music
   - DeathTerrain
+  - Enemy
+  - ParticleSystem
+  - Collider
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - TerrainCollider
   - Platform
   - Falling
   - 
